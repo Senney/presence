@@ -48,7 +48,7 @@ app.get('/presence', (req, res) => {
   res.status(200).send(presence[presence.length - 1]);
 });
 
-app.get('/presence/png', async (req, res) => {
+app.get('/presence/image.png', async (req, res) => {
   const currentPresence = presence[presence.length - 1] ?? {};
   const image = await generateStatusImage(
     currentPresence.status,
